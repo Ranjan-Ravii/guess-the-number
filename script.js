@@ -1,4 +1,4 @@
-const giveUpButton  = document.querySelector(".giveUp");
+ const giveUpButton  = document.querySelector(".giveUp");
 const playAgainButton  = document.querySelector('.palyAgain');
 const numBox = document.querySelector('.num_box')
 const result = document.querySelector('.result')
@@ -9,10 +9,14 @@ const countdownDisplay  = document.querySelector('.countdown')
 let countdownValue = 10
 const randomNum = Math.floor((Math.random() * 100) + 1)
 console.log(randomNum)
-var x = document.querySelector(".myAudio");
+var winAudio = document.querySelector(".myAudio_win");
+var loosAudio = document.querySelector(".myAudio_loss");
 
-function playAudio() {
-  x.play();
+function playAudioWin() {
+  winAudio.play();
+}
+function playAudioLoos() {
+  loosAudio.play();
 }
 
 
@@ -58,7 +62,7 @@ guessButton.addEventListener('click', function () {
         countdownDisplay.innerHTML = countdownValue;
 
         if (randomNum == numBox.value) {
-            playAudio()
+            playAudioWin()
             result.innerHTML = "Congratulations! You won.";
         } else if (randomNum > numBox.value) {
             numBox.value = '';
@@ -70,6 +74,7 @@ guessButton.addEventListener('click', function () {
         }
         if (countdownValue === 0) {
             numBox.value = '';
+            playAudioLoos()
             result.innerHTML = `You lost..! it's ${randomNum}`;
         }
     }

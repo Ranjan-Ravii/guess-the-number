@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(./landscape_bg.jpg);
+    background-size: cover;
+  }
+  .parent_box{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items:center;
+      border: 0.5px solid white;
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.5), 0 0 30px rgba(0, 128, 255, 0.5);
+      height: 300px;
+      width: 300px;
+  }
+  .heading{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+  }
+ 
+  button{
+      height: 30px;
+      width: 90px;
+      margin: 2px 10px;
+  }
+  .title, .subtitle, .text, .result, .steps{
+      color: white;
+      font-weight: bolder;
+  }
+  
+  .countdown{
+      color: rgb(0, 255, 221);
+  }
+
+  .num_box{
+      height: 40px;
+      width: 180px;
+      border: 0.5px solid black;
+      box-shadow: 0 20px 20px rgba(22, 65, 108, 0.5), 0 0 30px rgba(0, 128, 255, 0.5);
+      text-align: center;
+      font-size: larger;
+      font-weight: bolder;
+  }

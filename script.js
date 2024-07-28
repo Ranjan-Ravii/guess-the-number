@@ -25,7 +25,7 @@ giveUpButton.addEventListener('click', function () {
     result.innerHTML = "You Loosed the Game."
     countdownValue = 10;
     countdownDisplay.innerHTML = countdownValue;
-    
+    playAudioLoos()
     
 })
 
